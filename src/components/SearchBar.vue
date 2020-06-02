@@ -1,6 +1,7 @@
 <template>
   <div class="search-bar">
     <input type="text" placeholder="Search"  @keypress.enter="onInput" class="pl-4"/>
+    <button @click="onInput" class="search-btn btn d-md-inline d-lg-none d-xl-none"> 가즈아 </button>
   </div>
 </template>
 
@@ -26,4 +27,11 @@ div.search-bar > input {
   width: 60%;
 }
 
+div.search-bar > .search-btn{
+  background-color: #3fb883;
+  color: white;
+  font-size: 0.8rem;
+  padding: 5px, 8px;
+  margin-left: 5px;
+}
 </style>

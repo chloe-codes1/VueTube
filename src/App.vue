@@ -1,11 +1,16 @@
 <template>
   <div class="container my-3">
     <!-- Emit 2. 듣고, -->
+    <div v-if="videos.length === 0" class="main-logo">
+      <img alt="Vue logo" src="./assets/logo.png" class="">
+      <p>VueTube</p>  
+    </div>
     <SearchBar @input-change="onInputChange" class="mb-3"/>
     <div class="row">
       <VideoDetail :video="selectedVideo" :videos="videos" />
       <VideoList @video-select="onVideoSelect" :videos="videos" />
     </div>
+    <button v-if="videos.length > 0" @click="scrollToTop" class="button-bottom btn">Top</button>
   </div>
 </template>
 
@@ -62,12 +67,38 @@ export default {
     },
     onVideoSelect(video){
       this.selectedVideo = video
-    }
+    },
+    scrollToTop: function(){
+                scroll(0,0) // 맨 위로 올리기 = > window는 전역객체라서 생략함
+            },
   }
 }
 </script>
 
 <style scoped>
 /* vue에서만 적용되는 scoped 속성 */
+div.main-logo{
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
 
+div.main-logo > p {
+  font-size: 2.2rem;
+  color: #3fb883;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.button-bottom {
+    position: fixed;
+    right: 4vw;
+    bottom: 2vh;
+    border: 1px solid #3fb883;
+    padding: 2px 4px;
+    color: #3fb883;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
 </style>
