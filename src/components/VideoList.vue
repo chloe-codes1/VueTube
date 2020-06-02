@@ -1,5 +1,5 @@
 <template>
-  <div class="col-4">
+  <div class="col-md-12 col-lg-4">
     <h5 v-if="videos.length > 0">Up next</h5>
     <VideoListItem 
           @video-select="onVideoSelect"
