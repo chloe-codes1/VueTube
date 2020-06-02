@@ -1,4 +1,10 @@
-# Youtube browser
+#  VueTube
+
+> Vue로 만든 Youtube, `VueTube` !
+
+<br>
+
+<br>
 
 
 ## Project setup

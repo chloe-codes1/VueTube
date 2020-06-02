@@ -80,7 +80,7 @@ export default {
 div.main-logo{
   width: 100%;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 div.main-logo > p {
@@ -96,9 +96,8 @@ div.main-logo > p {
     right: 4vw;
     bottom: 2vh;
     border: 1px solid #3fb883;
-    padding: 2px 4px;
+    padding: 4px 8px;
     color: #3fb883;
     font-weight: bold;
-    font-size: 0.7rem;
 }
 </style>
