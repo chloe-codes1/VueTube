@@ -5,7 +5,7 @@
       <img alt="Vue logo" src="./assets/logo.png" class="">
       <p>VueTube</p>  
     </div>
-    <SearchBar @input-change="onInputChange" class="mb-3"/>
+    <SearchBar @input-change="onInputChange" class="mb-4"/>
     <div class="row">
       <VideoDetail :video="selectedVideo" :videos="videos" />
       <VideoList @video-select="onVideoSelect" :videos="videos" />

@@ -21,7 +21,6 @@ export default {
 <style>
 div.search-bar{
   text-align : center;
-  margin: 20px;
 }
 
 div.search-bar > input {
