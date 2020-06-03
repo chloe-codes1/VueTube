@@ -3,7 +3,7 @@
   <div v-if="video">
     <div class="embed-responsive embed-responsive-16by9">
       <iframe id="player" type="text/html" class="video-iframe embed-responsive-item" 
-              :src="videoURL" frameborder="0"></iframe>
+              :src="videoURL" frameborder="0" allowfullscreen></iframe>
     </div>
     <p class="video-detail-title"> {{video.snippet.title}}</p>
     <p class="published-at">{{video.snippet.publishedAt | dateParse('MM.DD.YY', { epoch: 1900 }) }}</p>
