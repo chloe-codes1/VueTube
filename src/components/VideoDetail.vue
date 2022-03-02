@@ -6,14 +6,16 @@
               :src="videoURL" frameborder="0" allowfullscreen></iframe>
     </div>
     <p class="video-detail-title"> {{video.snippet.title}}</p>
-    <p class="published-at">{{video.snippet.publishedAt | dateParse('MM.DD.YY', { epoch: 1900 }) }}</p>
+    <p class="published-at">{{video.snippet.publishedAt | moment('MMMM DD, YYYY') }}</p>
+    <p class="channel-title">{{video.snippet.channelTitle}}</p>
+    <div class="description">{{video.snippet.description}} </div>
+    <!-- <div>{{video.contentDetails.caption}}</div> -->
   </div>
 </div>
 
 </template>
 
 <script>
-
 export default {
   name: 'VideoDetail',
   props: {
@@ -44,4 +46,11 @@ export default {
   font-size: 0.8rem;
 }
 
+.channel-title {
+  font-size: 0.9rem;
+}
+
+.description {
+  font-size: 0.8rem;
+}
 </style>

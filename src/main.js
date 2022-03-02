@@ -1,9 +1,8 @@
-import Vue from 'vue'
 import App from './App.vue'
+import Vue from 'vue'
+import VueMoment from 'vue-moment';
 
-import VueFilterDateParse from '@vuejs-community/vue-filter-date-parse';
- 
-Vue.use(VueFilterDateParse);
+Vue.use(VueMoment);
 Vue.config.productionTip = false
 
 new Vue({
