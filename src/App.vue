@@ -1,5 +1,7 @@
 <template>
   <div class="container my-3">
+    <DarkMode class="theme-switch"/>
+
     <!-- Emit 2. 듣고, -->
     <div v-if="videos.length === 0" class="main-logo">
       <img alt="Vue logo" src="./assets/logo.png" class="">
@@ -19,6 +21,7 @@ import axios from 'axios'
 import SearchBar from '@/components/SearchBar'
 import VideoList from '@/components/VideoList'
 import VideoDetail from '@/components/VideoDetail'
+import DarkMode from "vue-dark-mode-switcher";
 
 // 절대로 바뀌면 안되는 상수는 all capitalize
 const API_KEY = process.env.VUE_APP_YOUTUBE_API_KEY // .env.local 에 있는 "YOUTUBE_API_KEY" 불러오기
@@ -30,7 +33,7 @@ export default {
     SearchBar,
     VideoList,
     VideoDetail,
-
+    DarkMode
   },
   data(){
     return{
@@ -75,6 +78,13 @@ export default {
 }
 </script>
 
+<style>
+.theme-dark{
+    background: black;
+    color: white;
+}
+</style>
+
 <style scoped>
 /* vue에서만 적용되는 scoped 속성 */
 div.main-logo{
@@ -100,4 +110,14 @@ div.main-logo > p {
     color: #3fb883;
     font-weight: bold;
 }
+
+.theme-switch {
+    position: fixed;
+    right: 4vw;
+    top: 2vh;
+    padding: 4px 8px;
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
 </style>
